@@ -15,9 +15,40 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
-
+    <picture>
+      <!-- landscape first, 960 or smaller: no bigger than 960 so max, in which the order is from small to big-->
+      <source srcset="images/landscape_320px.jpg,
+                      images/landscape_640px.jpg 2x,
+                      images/landscape_960px.jpg 3x" media="(max-width:320px)">
+      <source srcset="images/landscape_480px.jpg,
+                      images/landscape_960px.jpg 2x,
+                      images/landscape_1440px.jpg 3x" media="(max-width:480px)">
+      <source srcset="images/landscape_720px.jpg,
+                      images/landscape_1440px.jpg 2x,
+                      images/landscape_2160px.jpg 3x" media="(max-width:720px)">
+      <source srcset="images/landscape_960px.jpg,
+                      images/landscape_1920px.jpg 2x,
+                      images/landscape_2880px.jpg 3x" media="(max-width:960px)">
+      <!-- square below : 960 or larger = at least 960, so min in which the order goes from big to small-->
+      <source srcset="images/square_800px.jpg,
+                      images/square_1600px.jpg 2x,
+                      images/square_2400px.jpg 3x" media="(min-width:1600px)">
+  
+      <source srcset="images/square_640px.jpg,
+                      images/square_1280px.jpg 2x,
+                      images/square_1920px.jpg 3x" media="(min-width:1280px)">
+  
+      <source srcset="images/square_480px.jpg,
+                      images/square_960px.jpg 2x,
+                      images/square_1440px.jpg 3x" media="(min-width:960px)">
+  
+  
+      <img class="orig_img" src="images/museum.jpg"
+        alt="a room with walls on which many paintings are hung in a museum">
+  
+    </picture>
   </header>
+  
 </body>
 
 </html>

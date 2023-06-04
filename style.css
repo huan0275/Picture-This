@@ -12,11 +12,14 @@ body {
   grid-template-columns: 1fr;
   align-items: center;
   background-color: cadetblue;
+ 
 }
 
 .title {
   padding: 50px 25px;
   text-align: center;
+  /* lack background in this part, known by the arrow of inspector */
+  background-color: cadetblue;
 }
 
 h1 {
@@ -37,4 +40,5 @@ img {
   .header {
     grid-template-columns: repeat(2, 1fr);
   }
+  
 }
